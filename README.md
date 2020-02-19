@@ -1,3 +1,5 @@
 TDD-course
 
-E-mail to generate token on Spotify API: besiko7245@kamismail.com
+Generate token on Spotify API:
+login: besiko7245@kamismail.com
+password: qwerty1234
