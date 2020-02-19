@@ -1,23 +1,10 @@
-const FizzBuzz = num => {
-	if(num === 0) {
-		return 0;
-	}
+import spotify from './spotify';
+import renderAlbums from './albumList';
 
-	if(num % 3 === 0 && num % 5 === 0) {
-		return 'FizzBuzz';
-	}
+const albums = spotify.search.albums('Foo Fighters');
 
-	if(num % 3 === 0) {
-		return 'Fizz';
-	}
+albums.then(response => {
+  const albumsList = document.getElementById('album-list');
 
-	if(num % 5 === 0) {
-		return 'Buzz'
-	}
-
-	return num;
-}
-
-const Foo = () => 'Foo';
-
-export default FizzBuzz;
+  renderAlbums(response.data.albums.items, albumsList);
+});
