@@ -7,4 +7,6 @@ export default function AlbumInfo(data, element) {
   `;
 
   element.innerHTML = markup;
+
+  return data;
 }

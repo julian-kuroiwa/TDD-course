@@ -44,4 +44,10 @@ describe('AlbumInfo', () => {
 
     expect(div.innerHTML).toEqual(markup);
   });
+
+  test('should return the data', () => {
+    const div = document.createElement('div');
+
+    expect(AlbumInfo(data, div)).toEqual(data);
+  })
 });

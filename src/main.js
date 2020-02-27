@@ -1,10 +1,7 @@
-import spotify from './spotify';
-import renderAlbums from './albumList';
+import searchTrigger from './SearchTrigger';
+import selectAlbumTrigger from './SelectAlbumTrigger';
+import playlistTrigger from './PlaylistTrigger';
 
-const albums = spotify.search.albums('Foo Fighters');
-
-albums.then(response => {
-  const albumsList = document.getElementById('album-list');
-
-  renderAlbums(response.data.albums.items, albumsList);
-});
+searchTrigger();
+selectAlbumTrigger();
+playlistTrigger();
